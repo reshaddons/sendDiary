@@ -1,0 +1,6 @@
+aiogram==3.0.0
+fastapi==0.103.0
+pydantic==1.10.5
+python-dotenv==1.0.0
+touch==2020.12.3
+uvicorn==0.23.2

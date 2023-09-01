@@ -1,0 +1,14 @@
+{
+  "name": "Resh Diary Updater",
+  "description": "Отстук об оценках в Telegram",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "js": ["reshSendDiary.js"],
+      "matches": ["https://resh.edu.ru/*", "http://resh.edu.ru/*", "http://resh.edu.ru/"]
+    }
+  ],
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions":["https://resh.edu.ru/*", "http://resh.edu.ru/*", "http://resh.edu.ru/"]
+}
