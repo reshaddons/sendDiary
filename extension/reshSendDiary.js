@@ -1,6 +1,13 @@
 const reshSendDiary = async ()=>{
   if(location.hostname == 'resh.edu.ru' && document.querySelector("body > div.outer-sf > div > header > div > div > div.d-tc.header-top__login-cell > div > a:nth-child(1)")== null){
-    const res = (await (await fetch('https://resh.edu.ru/office/user/diary/', {credentials: 'include'})).text())
+    date = new Date();
+    let month = date.getMonth()
+    month = ((month < 12) ? '0'+month: month);
+    let day = date.getDay()
+    day = ((day < 10) ? '0'+day: day);
+    let year = date.getFullYear();
+    date = `${day}.${month}.${year}`;
+    const res = (await (await fetch(`https://resh.edu.ru/office/user/diary/?start=${date}&finish=${date}`, {credentials: 'include'})).text())
     const parser = new DOMParser();
     const table = parser.parseFromString(res, "text/html").getElementsByTagName('table')[0];
     const trs = table.getElementsByTagName('tr');
