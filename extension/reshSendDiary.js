@@ -1,6 +1,6 @@
 const reshSendDiary = async ()=>{
   if(location.hostname == 'resh.edu.ru' && document.querySelector("body > div.outer-sf > div > header > div > div > div.d-tc.header-top__login-cell > div > a:nth-child(1)")== null){
-    date = new Date();
+    let date = new Date();
     let month = date.getMonth()
     month = ((month < 12) ? '0'+month: month);
     let day = date.getDay()
