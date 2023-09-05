@@ -3,7 +3,7 @@ const reshSendDiary = async ()=>{
     let date = new Date();
     let month = date.getMonth()
     month = ((month < 12) ? '0'+month: month);
-    let day = date.getDay()
+    let day = date.getDate()
     day = ((day < 10) ? '0'+day: day);
     let year = date.getFullYear();
     date = `${day}.${month}.${year}`;
